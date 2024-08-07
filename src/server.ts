@@ -16,13 +16,13 @@ app.use(router)
 
 app.use(adminJs.options.rootPath, adminJsRouter)
 
- const PORT = process.env.PORT || 3000;
-
+const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => {
   sequelize.authenticate().then(() => {
-    console.log('DB connection successfull.')
+    console.log('DB connection successful.')
   })
 
-  console.log(`Server started successfuly at port ${PORT}.`)
+  console.log(`Server started successfully at port ${PORT}.`)
+  console.log(`Express is running on http://localhost:${PORT}`)
 })
